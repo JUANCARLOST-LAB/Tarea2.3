@@ -3,15 +3,7 @@ package com.fcfm.backend.model;
 public class Alumno {
 
 
-    public String getApellidoMat() {
-        return apellidoMat;
-    }
 
-    public void setApellidoMat(String apellidoMat) {
-        this.apellidoMat = apellidoMat;
-    }
-
-    private String apellidoMat;
     public String getNombre() {
         return nombre;
     }
@@ -21,6 +13,16 @@ public class Alumno {
     }
 
     private String nombre;
+
+    public String getApellidoMat() {
+        return apellidoMat;
+    }
+
+    public void setApellidoMat(String apellidoMat) {
+        this.apellidoMat = apellidoMat;
+    }
+
+    private String apellidoMat;
 
 
     public String getApellidoPat() {
@@ -44,7 +46,24 @@ public class Alumno {
     private String fechaNac;
 
 
+    public String getTelefono() {
+        return telefono;
+    }
 
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 
+    private String telefono;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private String email;
 
 }

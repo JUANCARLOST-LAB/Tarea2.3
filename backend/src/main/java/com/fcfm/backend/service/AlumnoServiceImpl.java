@@ -2,6 +2,8 @@ package com.fcfm.backend.service;
 
 import com.fcfm.backend.model.Alumno;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,4 +21,10 @@ public class AlumnoServiceImpl implements AlumnoService{
     public Alumno getAlumnoById(int idAlumno){
         return alumnoList.get(idAlumno);
     }
+
+    public void deleteAlumno(int idAlumno){alumnoList.remove(idAlumno);}
+
+    public void updateAlumno(int idAlumno,Alumno alumnoNuevo){alumnoList.set(idAlumno, alumnoNuevo);}
+
+    public int getListSize(){return alumnoList.size();}
 }

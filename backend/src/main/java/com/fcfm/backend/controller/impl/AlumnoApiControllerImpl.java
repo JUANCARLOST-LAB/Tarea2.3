@@ -4,6 +4,7 @@ import com.fcfm.backend.controller.AlumnoApiController;
 import com.fcfm.backend.model.Alumno;
 import com.fcfm.backend.service.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,5 +44,21 @@ public class AlumnoApiControllerImpl implements AlumnoApiController {
     private Alumno alumnoDummy(){
         Alumno alumnoDummy = new Alumno();
         return alumnoDummy;
+    }
+
+    @Override
+    public ResponseEntity<String> deleteAlumno(@PathVariable int idAlumno){
+        if(idAlumno >= 0 && idAlumno < alumnoService.getListSize()) {
+            alumnoService.deleteAlumno(idAlumno);
+            return ResponseEntity.ok().body(String.format("Estudiante con id %d eliminado correctamente", idAlumno));
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(String.format("Estudiante con id %d no encontrado", idAlumno));
+        }
+    }
+
+    @Override
+    public ResponseEntity<Alumno> updateAlumno(@PathVariable int idAlumno, @RequestBody Alumno alumnoNuevo){
+        alumnoService.updateAlumno(idAlumno, alumnoNuevo);
+        return ResponseEntity.ok().body(alumnoNuevo);
     }
 }
