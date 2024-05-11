@@ -1,6 +1,7 @@
 package com.fcfm.backend.repository.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.GenerationType;
 
 import java.sql.Date;
 
