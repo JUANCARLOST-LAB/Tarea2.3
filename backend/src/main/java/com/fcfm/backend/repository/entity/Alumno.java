@@ -8,13 +8,21 @@ import java.sql.Date;
 public class Alumno{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "alumnoId")
     private Long alumnoId;
+    @Column(name = "primerNombre")
     private String primerNombre;
+    @Column(name = "segundoNombre")
     private String segundoNombre;
+    @Column(name = "apellidoPat")
     private String apellidoPat;
+    @Column(name = "apellidoMat")
     private String apellidoMat;
+    @Column(name = "curp")
     private String curp;
+    @Column(name = "email")
     private String email;
+    @Column(name = "fechaNac")
     private Date fechaNac;
 
     public Alumno(String primerNombre, String segundoNombre, String apellidoPat, String apellidoMat, String curp,Date fechaNac, String email) {

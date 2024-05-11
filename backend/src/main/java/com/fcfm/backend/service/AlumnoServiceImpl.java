@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import jakarta.persistence.EntityManagerFactory;
 
 import java.sql.Date;
 import java.util.ArrayList;
