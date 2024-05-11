@@ -4,15 +4,15 @@ public class Alumno {
 
 
 
-    public String getNombre() {
-        return nombre;
+    public String getPrimerNombre() {
+        return primerNombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setPrimerNombre(String nombre) {
+        this.primerNombre = nombre;
     }
 
-    private String nombre;
+    private String primerNombre;
 
     public String getApellidoMat() {
         return apellidoMat;
@@ -66,4 +66,24 @@ public class Alumno {
 
     private String email;
 
+
+    public String getCurp() {
+        return curp;
+    }
+
+    public void setCurp(String curp) {
+        this.curp = curp;
+    }
+
+    public String getSegundoNombre() {
+        return segundoNombre;
+    }
+
+    public void setSegundoNombre(String segundoNombre) {
+        this.segundoNombre = segundoNombre;
+    }
+
+    private String curp;
+
+    private String segundoNombre;
 }
