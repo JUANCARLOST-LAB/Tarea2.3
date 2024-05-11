@@ -1,28 +1,28 @@
 package com.fcfm.backend.model;
 
-public class Alumno {
+import java.sql.Date;
 
-
-
-    public String getPrimerNombre() {
-        return primerNombre;
-    }
-
-    public void setPrimerNombre(String nombre) {
-        this.primerNombre = nombre;
-    }
-
+public class Alumno{
+    private int alumnoId;
     private String primerNombre;
-
-    public String getApellidoMat() {
-        return apellidoMat;
-    }
-
-    public void setApellidoMat(String apellidoMat) {
-        this.apellidoMat = apellidoMat;
-    }
-
+    private String segundoNombre;
+    private String apellidoPat;
     private String apellidoMat;
+    private String curp;
+    private String email;
+
+    private String fechaNac;
+
+    public String getFechaNac() {return fechaNac;}
+    public void setFechaNac(String fechaNac) {this.fechaNac = fechaNac;}
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 
     public String getApellidoPat() {
@@ -33,57 +33,27 @@ public class Alumno {
         this.apellidoPat = apellidoPat;
     }
 
-    private String apellidoPat;
-
-    public String getFechaNac() {
-        return fechaNac;
+    public String getApellidoMat() {
+        return apellidoMat;
     }
 
-    public void setFechaNac(String fechaNac) {
-        this.fechaNac = fechaNac;
+    public void setApellidoMat(String apellidoMat) {
+        this.apellidoMat = apellidoMat;
     }
 
-    private String fechaNac;
+    public String getPrimerNombre() {return primerNombre;}
 
+    public void setPrimerNombre(String primerNombre) {this.primerNombre = primerNombre;}
 
-    public String getTelefono() {
-        return telefono;
-    }
+    public String getSegundoNombre() {return segundoNombre;}
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+    public void setSegundoNombre(String segundoNombre) {this.segundoNombre = segundoNombre;}
 
-    private String telefono;
+    public String getCurp() {return curp;}
 
-    public String getEmail() {
-        return email;
-    }
+    public void setCurp(String curp) {this.curp = curp;}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public int getAlumnoId() {return alumnoId;}
 
-    private String email;
-
-
-    public String getCurp() {
-        return curp;
-    }
-
-    public void setCurp(String curp) {
-        this.curp = curp;
-    }
-
-    public String getSegundoNombre() {
-        return segundoNombre;
-    }
-
-    public void setSegundoNombre(String segundoNombre) {
-        this.segundoNombre = segundoNombre;
-    }
-
-    private String curp;
-
-    private String segundoNombre;
+    public void setAlumnoId(int id) {this.alumnoId = id;}
 }
